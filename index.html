@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pavan Yarlagadda | Robotics Engineer</title>
+
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
 </head>
+
 <body>
+
+<div id="robot-bg"></div>
 
 <header>
   <h1>Pavan Yarlagadda</h1>
@@ -21,27 +26,31 @@
   </div>
 </header>
 
-<section class="about">
+<section class="about fade">
   <h2>About Me</h2>
   <p>
-    I am a Robotics graduate student at the University at Buffalo, working on
-    real-world autonomous systems involving ROS2, navigation, control,
-    reinforcement learning, and sensor fusion. My work focuses on bridging
-    simulation and real deployment for mobile robots and manipulators.
+    I am a Robotics graduate student at the University at Buffalo working on
+    autonomous systems, reinforcement learning, perception, and control.
+    My focus is building robust real-world robotic systems that bridge
+    simulation and deployment.
   </p>
 </section>
 
-<section class="projects">
-  <h2>Highlighted Projects</h2>
+<section class="projects fade">
+  <h2>Projects</h2>
 
   <div class="project-card">
     <h3>Autonomous Navigation using Reinforcement Learning</h3>
+
+    <img src="assets/rl_nav.gif" class="project-media" />
+
     <p>
-      Built a ROS2–Gymnasium pipeline using PPO for autonomous navigation with
-      LiDAR-based perception. Implemented reward shaping, velocity constraints,
-      and sim-to-real workflows.
+      PPO-based navigation using ROS2 and LiDAR. Includes reward shaping,
+      velocity constraints, and sim-to-real pipelines.
     </p>
-    <p class="tech">ROS2 · PyTorch · PPO · Gazebo · LiDAR</p>
+
+    <p class="tech">ROS2 · PPO · PyTorch · Gazebo · LiDAR</p>
+
     <a href="https://github.com/Pavan-43/Autonomous_Navigation_using_Reinforcement_Learning" target="_blank">
       View on GitHub →
     </a>
@@ -49,52 +58,66 @@
 
   <div class="project-card">
     <h3>Autonomous Waypoint Navigation (Nav2)</h3>
+
+    <img src="assets/nav2.gif" class="project-media" />
+
     <p>
-      Implemented a complete ROS2 Nav2 pipeline with waypoint recording,
-      lifecycle nodes, and behavior trees for robust navigation in simulation.
+      Full ROS2 Nav2 stack with waypoint recording, lifecycle nodes,
+      recovery behaviors, and runtime goal injection.
     </p>
-    <p class="tech">ROS2 · Nav2 · RViz · Python · Gazebo</p>
+
+    <p class="tech">ROS2 · Nav2 · RViz · Gazebo · Python</p>
+
     <a href="https://github.com/Pavan-43/Autonomous_waypoint_navigation" target="_blank">
       View on GitHub →
     </a>
   </div>
 
   <div class="project-card">
-    <h3>Excavator Autonomy Research (University at Buffalo)</h3>
+    <h3>Excavator Autonomy (Research)</h3>
+
+    <video class="project-media" autoplay muted loop controls>
+      <source src="assets/excavator.mp4" type="video/mp4" />
+    </video>
+
     <p>
-      Developed state estimation and autonomy modules for large excavators using
-      LiDAR, GNSS, and AprilTags. Designed control-barrier-based safety logic and
-      contributed to real-world deployment with industry partners.
+      Developed state estimation, sensor fusion, and CBF-based safety logic
+      for large excavators in collaboration with Moog.
     </p>
+
     <p class="tech">ROS2 · Sensor Fusion · C++ · Control Barrier Functions</p>
   </div>
 
-  <div class="project-card">
-    <h3>TinyML Face Recognition on Edge Devices</h3>
-    <p>
-      Built and deployed a quantized face recognition model on Arduino Nano BLE
-      using TensorFlow Lite for real-time inference.
-    </p>
-    <p class="tech">TinyML · TensorFlow Lite · Embedded AI</p>
-  </div>
 </section>
 
-<section class="skills">
+<section class="skills fade">
   <h2>Skills</h2>
 
   <ul>
     <li><b>Languages:</b> C++, Python, Embedded C</li>
     <li><b>Robotics:</b> ROS2, Nav2, SLAM, TF2, Control, Sensor Fusion</li>
-    <li><b>Learning:</b> Reinforcement Learning (PPO), Q-Learning</li>
+    <li><b>Learning:</b> Reinforcement Learning (PPO, Q-learning)</li>
     <li><b>Perception:</b> OpenCV, LiDAR, AprilTags, YOLO</li>
     <li><b>Simulation:</b> Gazebo, RViz2</li>
     <li><b>Tools:</b> Git, Linux, TMUX, Docker (basic)</li>
   </ul>
 </section>
 
+<section class="contact fade">
+  <h2>Contact Me</h2>
+
+  <form action="https://formspree.io/f/xyzzabcd" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
 <footer>
   <p>© 2025 Pavan Yarlagadda — Robotics Portfolio</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
