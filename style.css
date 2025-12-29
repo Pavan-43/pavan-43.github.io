@@ -11,9 +11,20 @@ body {
   line-height: 1.6;
 }
 
+/* Robot animation */
+#robot-bg {
+  position: fixed;
+  top: 0;
+  right: -120px;
+  width: 480px;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Header */
 header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
   background: linear-gradient(145deg, #0f172a, #020617);
 }
 
@@ -25,7 +36,6 @@ header h1 {
 .subtitle {
   margin-top: 10px;
   color: #94a3b8;
-  font-size: 1.1rem;
 }
 
 .links {
@@ -37,8 +47,8 @@ header h1 {
   padding: 10px 16px;
   border: 1px solid #38bdf8;
   border-radius: 6px;
-  text-decoration: none;
   color: #38bdf8;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -55,22 +65,23 @@ section {
 
 h2 {
   color: #38bdf8;
-  margin-bottom: 20px;
   border-left: 4px solid #38bdf8;
   padding-left: 12px;
+  margin-bottom: 25px;
 }
 
+/* Projects */
 .project-card {
   background: #111827;
   border: 1px solid #1f2933;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 20px;
-  margin-bottom: 25px;
-  transition: transform 0.2s ease;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .project-card h3 {
@@ -78,28 +89,74 @@ h2 {
   margin-bottom: 10px;
 }
 
+.project-media {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+  border: 1px solid #1f2933;
+}
+
 .project-card .tech {
   color: #a5b4fc;
   font-size: 0.9rem;
-  margin: 10px 0;
+  margin-bottom: 8px;
 }
 
 .project-card a {
   color: #22c55e;
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
 }
 
+/* Skills */
 .skills ul {
   list-style: none;
-  padding-left: 0;
 }
 
 .skills li {
-  margin-bottom: 10px;
   background: #111827;
   padding: 12px;
   border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Contact */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 12px;
+  background: #0f172a;
+  border: 1px solid #1f2933;
+  border-radius: 6px;
+  color: white;
+}
+
+button {
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Fade animation */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 footer {
