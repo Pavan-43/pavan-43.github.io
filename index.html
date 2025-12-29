@@ -2,55 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Pavan | Robotics Engineer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      margin: 0;
-      padding: 40px;
-    }
-    h1 { color: #38bdf8; }
-    a { color: #22c55e; text-decoration: none; }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pavan Yarlagadda | Robotics Engineer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hi, I'm Pavan 👋</h1>
-  <p>Robotics Engineer | Autonomous Systems | Reinforcement Learning</p>
 
-  <div class="card">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <a href="https://github.com/Pavan-43/Autonomous_waypoint_navigation">
-          Autonomous Waypoint Navigation
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/Pavan-43/Autonomous_Navigation_using_Reinforcement_Learning">
-          RL-based Autonomous Navigation
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/Pavan-43/Robotics-Algorithms">
-          Robotics Algorithms
-        </a>
-      </li>
-    </ul>
+<header>
+  <h1>Pavan Yarlagadda</h1>
+  <p class="subtitle">
+    Robotics Engineer · ROS2 · Autonomous Systems · Reinforcement Learning
+  </p>
+
+  <div class="links">
+    <a href="https://github.com/Pavan-43" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yarlagadda-pavan-015365259" target="_blank">LinkedIn</a>
+    <a href="assets/resume.pdf" target="_blank">Download Resume</a>
+  </div>
+</header>
+
+<section class="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Robotics graduate student at the University at Buffalo, working on
+    real-world autonomous systems involving ROS2, navigation, control,
+    reinforcement learning, and sensor fusion. My work focuses on bridging
+    simulation and real deployment for mobile robots and manipulators.
+  </p>
+</section>
+
+<section class="projects">
+  <h2>Highlighted Projects</h2>
+
+  <div class="project-card">
+    <h3>Autonomous Navigation using Reinforcement Learning</h3>
+    <p>
+      Built a ROS2–Gymnasium pipeline using PPO for autonomous navigation with
+      LiDAR-based perception. Implemented reward shaping, velocity constraints,
+      and sim-to-real workflows.
+    </p>
+    <p class="tech">ROS2 · PyTorch · PPO · Gazebo · LiDAR</p>
+    <a href="https://github.com/Pavan-43/Autonomous_Navigation_using_Reinforcement_Learning" target="_blank">
+      View on GitHub →
+    </a>
   </div>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
-    <p>GitHub: <a href="https://github.com/Pavan-43">github.com/Pavan-43</a></p>
-    <p>LinkedIn: add-your-link</p>
+  <div class="project-card">
+    <h3>Autonomous Waypoint Navigation (Nav2)</h3>
+    <p>
+      Implemented a complete ROS2 Nav2 pipeline with waypoint recording,
+      lifecycle nodes, and behavior trees for robust navigation in simulation.
+    </p>
+    <p class="tech">ROS2 · Nav2 · RViz · Python · Gazebo</p>
+    <a href="https://github.com/Pavan-43/Autonomous_waypoint_navigation" target="_blank">
+      View on GitHub →
+    </a>
   </div>
+
+  <div class="project-card">
+    <h3>Excavator Autonomy Research (University at Buffalo)</h3>
+    <p>
+      Developed state estimation and autonomy modules for large excavators using
+      LiDAR, GNSS, and AprilTags. Designed control-barrier-based safety logic and
+      contributed to real-world deployment with industry partners.
+    </p>
+    <p class="tech">ROS2 · Sensor Fusion · C++ · Control Barrier Functions</p>
+  </div>
+
+  <div class="project-card">
+    <h3>TinyML Face Recognition on Edge Devices</h3>
+    <p>
+      Built and deployed a quantized face recognition model on Arduino Nano BLE
+      using TensorFlow Lite for real-time inference.
+    </p>
+    <p class="tech">TinyML · TensorFlow Lite · Embedded AI</p>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+
+  <ul>
+    <li><b>Languages:</b> C++, Python, Embedded C</li>
+    <li><b>Robotics:</b> ROS2, Nav2, SLAM, TF2, Control, Sensor Fusion</li>
+    <li><b>Learning:</b> Reinforcement Learning (PPO), Q-Learning</li>
+    <li><b>Perception:</b> OpenCV, LiDAR, AprilTags, YOLO</li>
+    <li><b>Simulation:</b> Gazebo, RViz2</li>
+    <li><b>Tools:</b> Git, Linux, TMUX, Docker (basic)</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 Pavan Yarlagadda — Robotics Portfolio</p>
+</footer>
+
 </body>
 </html>
