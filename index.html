@@ -4,148 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pavan Yarlagadda | Robotics Engineer</title>
-
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 
 <body>
 
-<nav>
-  <h2>Pavan Yarlagadda</h2>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+<div class="layout">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <h1>Hi, I'm <span>Pavan</span> 👋</h1>
-    <p>
-      Robotics Engineer working on autonomy, perception, planning,
-      and real-world robotic systems.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="assets/resume.pdf" target="_blank">Download Resume</a>
-      <a href="#projects" class="secondary">View Projects</a>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="assets/profile.jpg" alt="Profile" />
+      <h2>Pavan Yarlagadda</h2>
+      <p>Robotics Engineer</p>
     </div>
-  </div>
 
-  <div class="hero-right">
-    <!-- You can add profile.jpg later -->
-    <div class="profile-placeholder">
-      Your Photo
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="links">
+      <a href="assets/resume.pdf">Resume</a>
+      <a href="https://github.com/Pavan-43">GitHub</a>
     </div>
-  </div>
-</section>
+  </aside>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
+  <!-- MAIN -->
+  <main class="content">
 
-  <p>
-    I am a Robotics graduate student at the University at Buffalo, working on
-    autonomous systems, reinforcement learning, perception, and control.
-    My focus is building reliable robotic systems that transfer from
-    simulation to real-world deployment.
-  </p>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h1>About</h1>
 
-  <h3>Organizations I’ve worked with</h3>
+      <div class="robot-box">
+        <video autoplay muted loop playsinline>
+          <source src="assets/robot.mp4" type="video/mp4" />
+        </video>
+      </div>
 
-  <div class="org-logos">
-    <img src="assets/org/ub.png" alt="University at Buffalo" />
-    <img src="assets/org/moog.png" alt="Moog" />
-    <img src="assets/org/ace.png" alt="ACE Robotics" />
-    <img src="assets/org/iit.png" alt="IIIT" />
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="project-card">
-    <div class="media">
-      <img src="assets/projects/rl.gif" alt="RL navigation" />
-    </div>
-    <div class="content">
-      <h3>Autonomous Navigation using Reinforcement Learning</h3>
       <p>
-        PPO-based navigation using ROS2 and LiDAR with reward shaping,
-        velocity constraints, and sim-to-real pipelines.
+        I am a Robotics Engineer focused on autonomy, perception,
+        and real-world robotic systems. I enjoy building intelligent
+        robots that can sense, plan, and act reliably.
       </p>
-      <p class="tech">ROS2 · PPO · PyTorch · Gazebo · LiDAR</p>
-      <a href="https://github.com/Pavan-43/Autonomous_Navigation_using_Reinforcement_Learning">
-        View Code →
-      </a>
-    </div>
-  </div>
+    </section>
 
-  <div class="project-card">
-    <div class="media">
-      <img src="assets/projects/nav2.gif" alt="Nav2" />
-    </div>
-    <div class="content">
-      <h3>Autonomous Waypoint Navigation (Nav2)</h3>
-      <p>
-        ROS2 Nav2 pipeline with waypoint recording, lifecycle nodes,
-        and behavior-tree execution.
-      </p>
-      <p class="tech">ROS2 · Nav2 · RViz · Gazebo</p>
-      <a href="https://github.com/Pavan-43/Autonomous_waypoint_navigation">
-        View Code →
-      </a>
-    </div>
-  </div>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h1>Projects</h1>
 
-  <div class="project-card">
-    <div class="media">
-      <video autoplay muted loop>
-        <source src="assets/projects/excavator.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="content">
-      <h3>Excavator Autonomy (Research)</h3>
-      <p>
-        State estimation, sensor fusion, and control barrier functions
-        for large-scale autonomous excavation systems.
-      </p>
-      <p class="tech">ROS2 · Sensor Fusion · C++ · CBFs</p>
-    </div>
-  </div>
-</section>
+      <div class="project-card">
+        <h3>Autonomous Navigation (RL)</h3>
+        <p>ROS2 + PPO based navigation with LiDAR.</p>
+      </div>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <h2>Experience Highlights</h2>
+      <div class="project-card">
+        <h3>Waypoint Navigation (Nav2)</h3>
+        <p>ROS2 Nav2 stack with behavior trees.</p>
+      </div>
+    </section>
 
-  <ul class="experience-list">
-    <li>Graduate Research Assistant – University at Buffalo (Autonomous Excavation)</li>
-    <li>Research Intern – TinyML & Edge AI (IIT Varanasi)</li>
-    <li>Industrial Robotics Trainee – ACE Robotics</li>
-    <li>Python Developer – Godrej Agrovet</li>
-  </ul>
-</section>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h1>Experience</h1>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
+      <div class="exp-card">
+        <h3>Robotics Engineer – Rainier Labs</h3>
+        <p>Perception, SLAM, Isaac ROS, deployment.</p>
+      </div>
 
-  <div class="contact-box">
-    <p>📧 pavanyar@buffalo.edu</p>
-    <p>🔗 <a href="https://github.com/Pavan-43">github.com/Pavan-43</a></p>
-    <p>🔗 <a href="https://linkedin.com/in/yarlagadda-pavan-015365259">LinkedIn</a></p>
-  </div>
-</section>
+      <div class="exp-card">
+        <h3>Graduate Researcher – University at Buffalo</h3>
+        <p>Autonomous excavation and control systems.</p>
+      </div>
+    </section>
 
-<footer>
-  © 2025 Pavan Yarlagadda · Robotics Portfolio
-</footer>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h1>Contact</h1>
+      <p>Email: pavanyar@buffalo.edu</p>
+      <p>GitHub: github.com/Pavan-43</p>
+    </section>
 
+  </main>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
