@@ -1,127 +1,110 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", system-ui, sans-serif;
+:root{
+  --bg0:#060b10;
+  --bg1:#071018;
+  --panel: rgba(16, 28, 44, 0.66);
+  --panel2: rgba(10, 18, 30, 0.72);
+  --border: rgba(255,255,255,0.08);
+  --text:#e8eef7;
+  --muted:#9bb0c7;
+  --accent:#00e5ff;
+  --accent2:#7c4dff;
+  --glow: rgba(0,229,255,0.18);
+  --glow2: rgba(124,77,255,0.16);
+  --shadow: 0 24px 70px rgba(0,0,0,0.55);
 }
 
-body {
-  background: #0b0f14;
-  color: #e5e7eb;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: radial-gradient(1200px 700px at 20% 10%, rgba(0,229,255,0.10), transparent 55%),
+              radial-gradient(900px 600px at 90% 30%, rgba(124,77,255,0.10), transparent 55%),
+              linear-gradient(180deg, var(--bg0), var(--bg1));
+  color: var(--text);
+  overflow-x:hidden;
 }
 
-/* Layout */
-.layout {
-  display: flex;
-  min-height: 100vh;
+a{color:inherit}
+code{color: var(--accent);}
+
+#bg{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity:0.9;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 260px;
-  background: #111827;
-  padding: 30px 20px;
-  position: fixed;
-  height: 100vh;
-  border-right: 1px solid #1f2933;
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 18px;
+  border-bottom:1px solid var(--border);
+  background: linear-gradient(180deg, rgba(6,11,16,0.86), rgba(6,11,16,0.55));
+  backdrop-filter: blur(14px);
 }
 
-.profile img {
-  width: 120px;
-  border-radius: 12px;
-  margin-bottom: 10px;
+.brand{display:flex; align-items:center; gap:10px}
+.dot{
+  width:10px; height:10px; border-radius:999px;
+  background: var(--accent);
+  box-shadow: 0 0 18px var(--glow);
+}
+.brand-text{font-weight:700; letter-spacing:0.2px}
+.pill{
+  font-size:12px;
+  padding:6px 10px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.03);
 }
 
-.profile h2 {
-  color: #38bdf8;
+.topnav{display:flex; align-items:center; gap:14px}
+.topnav a{
+  text-decoration:none;
+  color: var(--muted);
+  font-weight:500;
+  font-size:14px;
+  padding:8px 10px;
+  border-radius:10px;
+  transition: all .18s ease;
+}
+.topnav a:hover{
+  color: var(--text);
+  background: rgba(255,255,255,0.04);
+}
+.topnav .cta{
+  color: var(--text);
+  border: 1px solid rgba(0,229,255,0.25);
+  background: linear-gradient(180deg, rgba(0,229,255,0.10), rgba(0,229,255,0.04));
+  box-shadow: 0 0 24px rgba(0,229,255,0.10);
 }
 
-.profile p {
-  color: #9ca3af;
+.menuBtn{
+  display:none;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  border-radius:12px;
+  padding:10px 12px;
 }
 
-nav {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.mobileMenu{
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(12px);
+  display:none;
+  z-index:100;
 }
-
-nav a {
-  color: #e5e7eb;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-.links {
-  margin-top: 40px;
-}
-
-.links a {
-  display: block;
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-/* Content */
-.content {
-  margin-left: 260px;
-  padding: 60px;
-  max-width: 1100px;
-}
-
-.section {
-  margin-bottom: 100px;
-}
-
-.section h1 {
-  font-size: 2rem;
-  color: #38bdf8;
-  margin-bottom: 25px;
-}
-
-/* Robot */
-.robot-box video {
-  width: 380px;
-  max-width: 100%;
-  border-radius: 14px;
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
-
-/* Cards */
-.project-card,
-.exp-card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 14px;
-  margin-bottom: 20px;
-  border: 1px solid #1f2933;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .layout {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-
-  .content {
-    margin-left: 0;
-    padding: 30px;
-  }
-}
+.mobileMenuInner{
+  position:absolute;
+  right:14px; top:14px;
+  width:min(360px, calc(
