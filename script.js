@@ -251,3 +251,45 @@ function draw() {
   requestAnimationFrame(draw);
 }
 draw();
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadProjects();
+});
+
+async function loadProjects() {
+  try {
+    const res = await fetch("projects.json");
+    const projects = await res.json();
+
+    const grid = document.getElementById("projectGrid");
+    if (!grid) return;
+
+    grid.innerHTML = "";
+
+    projects.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "projectCard";
+
+      const media = p.image.endsWith(".mp4")
+        ? `<video src="${p.image}" autoplay muted loop playsinline></video>`
+        : `<img src="${p.image}" alt="${p.title}">`;
+
+      card.innerHTML = `
+        <div class="projectMedia">${media}</div>
+        <div class="projectBody">
+          <h3>${p.title}</h3>
+          <p>${p.description}</p>
+          <div class="tags">
+            ${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+          </div>
+          <a class="projectLink" href="${p.github}" target="_blank">View Code →</a>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+  } catch (e) {
+    console.error("Project loading failed:", e);
+  }
+}
+
