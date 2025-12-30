@@ -1,17 +1,16 @@
-// simple fade-in on scroll
-const sections = document.querySelectorAll("section");
+// Fade-in animation
+document.querySelectorAll(".section").forEach(section => {
+  section.style.opacity = 0;
+  section.style.transform = "translateY(20px)";
+});
 
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = 1;
+      e.target.style.transform = "translateY(0)";
     }
   });
 });
 
-sections.forEach(sec => {
-  sec.style.opacity = 0;
-  sec.style.transform = "translateY(30px)";
-  observer.observe(sec);
-});
+document.querySelectorAll(".section").forEach(s => observer.observe(s));
