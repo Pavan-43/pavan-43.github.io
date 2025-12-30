@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Stereo Visual SLAM on KITTI Dataset",
+    "category": ["robotics", "cv"],
+    "image": "assets/projects/kitti_slam.gif",
+    "github": "https://github.com/ub-cse-4568-s25/assignment-3-stereo-visual-odometry-Pavan-43",
+    "description": "Implemented a stereo visual odometry pipeline using KITTI dataset. Extracted feature correspondences, estimated depth, recovered camera pose, and evaluated trajectory accuracy using ground-truth data.",
+    "tags": ["SLAM", "Computer Vision", "OpenCV", "Python"]
+  },
+
+  {
+    "title": "Autonomous Navigation using Reinforcement Learning",
+    "category": ["robotics", "ml"],
+    "image": "assets/projects/excavator_rl.mp4",
+    "github": "https://github.com/Pavan-43/Autonomous_Navigation_using_Reinforcement_Learning",
+    "description": "Built an autonomous navigation system using reinforcement learning where the agent learns obstacle avoidance and goal-directed navigation through reward-based optimization.",
+    "tags": ["Reinforcement Learning", "Navigation", "Robotics", "Python"]
+  },
+
+  {
+    "title": "Smart Irrigation System (IoT)",
+    "category": ["robotics"],
+    "image": "assets/projects/irrigation.mp4",
+    "github": "",
+    "description": "Designed an automated irrigation system using sensors and microcontrollers to monitor soil moisture and intelligently control water flow for efficient agriculture.",
+    "tags": ["IoT", "Arduino", "Embedded Systems"]
+  },
+
+  {
+    "title": "Liver Tumor Segmentation using Deep Learning",
+    "category": ["ml", "cv"],
+    "image": "assets/projects/liver_segmentation_results.png",
+    "gallery": [
+      "assets/projects/liver_training_curve.png"
+    ],
+    "github": "",
+    "description": "Developed a deep learning-based medical image segmentation model to detect liver tumors from CT scans. Evaluated predictions against ground truth masks using Dice coefficient.",
+    "tags": ["Deep Learning", "Medical Imaging", "U-Net", "Python"]
+  }
+]
