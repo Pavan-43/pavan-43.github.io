@@ -6,118 +6,146 @@
   <title>Pavan Yarlagadda | Robotics Engineer</title>
 
   <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 
 <body>
 
-<div id="robot-bg"></div>
-
-<header>
-  <h1>Pavan Yarlagadda</h1>
-  <p class="subtitle">
-    Robotics Engineer · ROS2 · Autonomous Systems · Reinforcement Learning
-  </p>
-
-  <div class="links">
-    <a href="https://github.com/Pavan-43" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/yarlagadda-pavan-015365259" target="_blank">LinkedIn</a>
-    <a href="assets/resume.pdf" target="_blank">Download Resume</a>
+<nav>
+  <h2>Pavan Yarlagadda</h2>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </div>
-</header>
+</nav>
 
-<section class="about fade">
-  <h2>About Me</h2>
-  <p>
-    I am a Robotics graduate student at the University at Buffalo working on
-    autonomous systems, reinforcement learning, perception, and control.
-    My focus is building robust real-world robotic systems that bridge
-    simulation and deployment.
-  </p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Hi, I'm <span>Pavan</span> 👋</h1>
+    <p>
+      Robotics Engineer working on autonomy, perception, planning,
+      and real-world robotic systems.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="assets/resume.pdf" target="_blank">Download Resume</a>
+      <a href="#projects" class="secondary">View Projects</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- You can add profile.jpg later -->
+    <div class="profile-placeholder">
+      Your Photo
+    </div>
+  </div>
 </section>
 
-<section class="projects fade">
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+
+  <p>
+    I am a Robotics graduate student at the University at Buffalo, working on
+    autonomous systems, reinforcement learning, perception, and control.
+    My focus is building reliable robotic systems that transfer from
+    simulation to real-world deployment.
+  </p>
+
+  <h3>Organizations I’ve worked with</h3>
+
+  <div class="org-logos">
+    <img src="assets/org/ub.png" alt="University at Buffalo" />
+    <img src="assets/org/moog.png" alt="Moog" />
+    <img src="assets/org/ace.png" alt="ACE Robotics" />
+    <img src="assets/org/iit.png" alt="IIIT" />
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
   <h2>Projects</h2>
 
   <div class="project-card">
-    <h3>Autonomous Navigation using Reinforcement Learning</h3>
-
-    <img src="assets/rl_nav.gif" class="project-media" />
-
-    <p>
-      PPO-based navigation using ROS2 and LiDAR. Includes reward shaping,
-      velocity constraints, and sim-to-real pipelines.
-    </p>
-
-    <p class="tech">ROS2 · PPO · PyTorch · Gazebo · LiDAR</p>
-
-    <a href="https://github.com/Pavan-43/Autonomous_Navigation_using_Reinforcement_Learning" target="_blank">
-      View on GitHub →
-    </a>
+    <div class="media">
+      <img src="assets/projects/rl.gif" alt="RL navigation" />
+    </div>
+    <div class="content">
+      <h3>Autonomous Navigation using Reinforcement Learning</h3>
+      <p>
+        PPO-based navigation using ROS2 and LiDAR with reward shaping,
+        velocity constraints, and sim-to-real pipelines.
+      </p>
+      <p class="tech">ROS2 · PPO · PyTorch · Gazebo · LiDAR</p>
+      <a href="https://github.com/Pavan-43/Autonomous_Navigation_using_Reinforcement_Learning">
+        View Code →
+      </a>
+    </div>
   </div>
 
   <div class="project-card">
-    <h3>Autonomous Waypoint Navigation (Nav2)</h3>
-
-    <img src="assets/nav2.gif" class="project-media" />
-
-    <p>
-      Full ROS2 Nav2 stack with waypoint recording, lifecycle nodes,
-      recovery behaviors, and runtime goal injection.
-    </p>
-
-    <p class="tech">ROS2 · Nav2 · RViz · Gazebo · Python</p>
-
-    <a href="https://github.com/Pavan-43/Autonomous_waypoint_navigation" target="_blank">
-      View on GitHub →
-    </a>
+    <div class="media">
+      <img src="assets/projects/nav2.gif" alt="Nav2" />
+    </div>
+    <div class="content">
+      <h3>Autonomous Waypoint Navigation (Nav2)</h3>
+      <p>
+        ROS2 Nav2 pipeline with waypoint recording, lifecycle nodes,
+        and behavior-tree execution.
+      </p>
+      <p class="tech">ROS2 · Nav2 · RViz · Gazebo</p>
+      <a href="https://github.com/Pavan-43/Autonomous_waypoint_navigation">
+        View Code →
+      </a>
+    </div>
   </div>
 
   <div class="project-card">
-    <h3>Excavator Autonomy (Research)</h3>
-
-    <video class="project-media" autoplay muted loop controls>
-      <source src="assets/excavator.mp4" type="video/mp4" />
-    </video>
-
-    <p>
-      Developed state estimation, sensor fusion, and CBF-based safety logic
-      for large excavators in collaboration with Moog.
-    </p>
-
-    <p class="tech">ROS2 · Sensor Fusion · C++ · Control Barrier Functions</p>
+    <div class="media">
+      <video autoplay muted loop>
+        <source src="assets/projects/excavator.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="content">
+      <h3>Excavator Autonomy (Research)</h3>
+      <p>
+        State estimation, sensor fusion, and control barrier functions
+        for large-scale autonomous excavation systems.
+      </p>
+      <p class="tech">ROS2 · Sensor Fusion · C++ · CBFs</p>
+    </div>
   </div>
-
 </section>
 
-<section class="skills fade">
-  <h2>Skills</h2>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience Highlights</h2>
 
-  <ul>
-    <li><b>Languages:</b> C++, Python, Embedded C</li>
-    <li><b>Robotics:</b> ROS2, Nav2, SLAM, TF2, Control, Sensor Fusion</li>
-    <li><b>Learning:</b> Reinforcement Learning (PPO, Q-learning)</li>
-    <li><b>Perception:</b> OpenCV, LiDAR, AprilTags, YOLO</li>
-    <li><b>Simulation:</b> Gazebo, RViz2</li>
-    <li><b>Tools:</b> Git, Linux, TMUX, Docker (basic)</li>
+  <ul class="experience-list">
+    <li>Graduate Research Assistant – University at Buffalo (Autonomous Excavation)</li>
+    <li>Research Intern – TinyML & Edge AI (IIT Varanasi)</li>
+    <li>Industrial Robotics Trainee – ACE Robotics</li>
+    <li>Python Developer – Godrej Agrovet</li>
   </ul>
 </section>
 
-<section class="contact fade">
-  <h2>Contact Me</h2>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
 
-  <form action="https://formspree.io/f/xyzzabcd" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your message..." required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="contact-box">
+    <p>📧 pavanyar@buffalo.edu</p>
+    <p>🔗 <a href="https://github.com/Pavan-43">github.com/Pavan-43</a></p>
+    <p>🔗 <a href="https://linkedin.com/in/yarlagadda-pavan-015365259">LinkedIn</a></p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2025 Pavan Yarlagadda — Robotics Portfolio</p>
+  © 2025 Pavan Yarlagadda · Robotics Portfolio
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
