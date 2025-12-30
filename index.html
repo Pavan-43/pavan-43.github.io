@@ -1,97 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pavan Yarlagadda | Robotics Engineer</title>
+  <meta name="description" content="Robotics Engineer — ROS2, Autonomy, Perception, SLAM, Sensor Fusion, RL. Portfolio of projects, experience, and demos." />
+  <meta name="theme-color" content="#071018" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- Animated background -->
+  <canvas id="bg"></canvas>
 
-<div class="layout">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="profile">
-      <img src="assets/profile.jpg" alt="Profile" />
-      <h2>Pavan Yarlagadda</h2>
-      <p>Robotics Engineer</p>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="brand-text">Pavan Yarlagadda</span>
+      <span class="pill">Robotics Engineer</span>
     </div>
 
-    <nav>
+    <nav class="topnav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
+      <a class="cta" href="assets/resume.pdf" target="_blank" rel="noopener">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     </nav>
 
-    <div class="links">
-      <a href="assets/resume.pdf">Resume</a>
-      <a href="https://github.com/Pavan-43">GitHub</a>
+    <button id="menuBtn" class="menuBtn" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <aside id="mobileMenu" class="mobileMenu" aria-hidden="true">
+    <div class="mobileMenuInner">
+      <button id="closeMenuBtn" class="closeBtn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
   </aside>
 
-  <!-- MAIN -->
-  <main class="content">
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-left">
+        <div class="kicker">ROS2 • Autonomy • Perception • Sim-to-Real</div>
+        <h1>
+          Building reliable robotics systems <span class="glow">for the real world</span>.
+        </h1>
+        <p class="lead">
+          Robotics engineer focused on ROS2, C++/Python, state estimation, sensor fusion, SLAM, and safety-critical autonomy.
+          Experienced with field-integrated systems and GPU-accelerated learning pipelines.
+        </p>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h1>About</h1>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">
+            View Projects <i class="fa-solid fa-angles-down"></i>
+          </a>
+          <a class="btn" href="https://github.com/Pavan-43" target="_blank" rel="noopener">
+            GitHub <i class="fa-brands fa-github"></i>
+          </a>
+          <a class="btn" href="https://linkedin.com/in/yarlagadda-pavan-015365259" target="_blank" rel="noopener">
+            LinkedIn <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
 
-      <div class="robot-box">
-        <video autoplay muted loop playsinline>
-          <source src="assets/robot.mp4" type="video/mp4" />
-        </video>
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-title">ROS2</div>
+            <div class="metric-sub">Nav2, TF2, Actions, Lifecycle</div>
+          </div>
+          <div class="metric">
+            <div class="metric-title">Autonomy</div>
+            <div class="metric-sub">Mapping, planning, safety (CBFs)</div>
+          </div>
+          <div class="metric">
+            <div class="metric-title">ML + CV</div>
+            <div class="metric-sub">PPO RL, OpenCV, TinyML</div>
+          </div>
+        </div>
       </div>
 
-      <p>
-        I am a Robotics Engineer focused on autonomy, perception,
-        and real-world robotic systems. I enjoy building intelligent
-        robots that can sense, plan, and act reliably.
-      </p>
+      <div class="hero-right">
+        <div class="robotCard">
+          <div class="robotHeader">
+            <div class="robotTitle">
+              <i class="fa-solid fa-microchip"></i>
+              Live Demo Loop
+            </div>
+            <div class="robotBadges">
+              <span class="chip">mp4</span>
+              <span class="chip">autoplay</span>
+              <span class="chip">loop</span>
+            </div>
+          </div>
+
+          <div class="robotMedia">
+            <!-- Put your file here: assets/robot.mp4 -->
+            <video autoplay muted loop playsinline>
+              <source src="assets/robot.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="robotFooter">
+            <div class="mini">
+              <div class="miniLabel">Location</div>
+              <div class="miniValue">Buffalo, NY</div>
+            </div>
+            <div class="mini">
+              <div class="miniLabel">Email</div>
+              <div class="miniValue"><a href="mailto:pavanyar@buffalo.edu">pavanyar@buffalo.edu</a></div>
+            </div>
+            <div class="mini">
+              <div class="miniLabel">Phone</div>
+              <div class="miniValue"><a href="tel:+17165470648">+1 (716) 547-0648</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile image placeholder (optional) -->
+        <div class="profileRow">
+          <div class="profilePic">
+            <img src="assets/profile.jpg" alt="Profile photo" onerror="this.style.display='none'; this.parentElement.classList.add('empty');" />
+            <div class="profileFallback">
+              Add <code>assets/profile.jpg</code> later
+            </div>
+          </div>
+
+          <div class="profileFacts">
+            <div class="fact">
+              <div class="factKey">Education</div>
+              <div class="factVal">M.S. Robotics — University at Buffalo (Aug 2024–Present)</div>
+            </div>
+            <div class="fact">
+              <div class="factKey">Degree</div>
+              <div class="factVal">B.Tech Mechanical — IIITDM Jabalpur (2020–2024)</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h1>Projects</h1>
-
-      <div class="project-card">
-        <h3>Autonomous Navigation (RL)</h3>
-        <p>ROS2 + PPO based navigation with LiDAR.</p>
+    <section class="section" id="projects">
+      <div class="sectionHead">
+        <h2>Projects</h2>
+        <p>GIF/video-ready cards with demo slots. Update the links + media in <code>projects.json</code>.</p>
       </div>
 
-      <div class="project-card">
-        <h3>Waypoint Navigation (Nav2)</h3>
-        <p>ROS2 Nav2 stack with behavior trees.</p>
+      <div class="toolbar">
+        <input id="search" class="search" placeholder="Search projects (e.g., ROS2, PPO, Nav2, OpenCV)..." />
+        <div class="segmented" role="tablist" aria-label="Project filters">
+          <button class="seg active" data-filter="all">All</button>
+          <button class="seg" data-filter="robotics">Robotics</button>
+          <button class="seg" data-filter="ml">ML / RL</button>
+          <button class="seg" data-filter="cv">Vision</button>
+        </div>
+      </div>
+
+      <div id="projectGrid" class="grid"></div>
+
+      <div class="hint">
+        ✅ Put project media in <code>assets/projects/</code> (gif/mp4/png). If a file is missing, the card still works.
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <h1>Experience</h1>
-
-      <div class="exp-card">
-        <h3>Robotics Engineer – Rainier Labs</h3>
-        <p>Perception, SLAM, Isaac ROS, deployment.</p>
+    <section class="section" id="experience">
+      <div class="sectionHead">
+        <h2>Experience</h2>
+        <p>Safety-critical autonomy, embedded AI, and robotics hardware/software integration.</p>
       </div>
 
-      <div class="exp-card">
-        <h3>Graduate Researcher – University at Buffalo</h3>
-        <p>Autonomous excavation and control systems.</p>
+      <div class="timeline">
+        <article class="tItem">
+          <div class="tDot"></div>
+          <div class="tCard">
+            <div class="tTop">
+              <h3>Graduate Research Assistant — University at Buffalo (EARTH)</h3>
+              <div class="tMeta">Jun 2025 – Present · Buffalo, NY</div>
+            </div>
+            <ul class="bullets">
+              <li>State estimation pipeline using AprilTags, inclinometer angles, LiDAR + GNSS for excavator joint pose under noise/occlusion.</li>
+              <li>Autonomous navigation modules for large excavators (mapping, localization, motion planning) in unstructured outdoor environments.</li>
+              <li>Designing Control Barrier Function (CBF) safety constraints for collision avoidance + workspace enforcement.</li>
+              <li>Hardware–simulation integration and real-world testing with Moog Inc.</li>
+              <li>ROS2 manipulation pipeline work (UR5) including camera–robot calibration + motion planning constraints.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">ROS2</span><span class="tag">State Estimation</span><span class="tag">Sensor Fusion</span>
+              <span class="tag">CBFs</span><span class="tag">Outdoor Autonomy</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tItem">
+          <div class="tDot"></div>
+          <div class="tCard">
+            <div class="tTop">
+              <h3>Research Intern — TinyML for Edge Devices (IIT Varanasi)</h3>
+              <div class="tMeta">Jan 2024 – May 2024 · India</div>
+            </div>
+            <ul class="bullets">
+              <li>Trained face recognition model optimized for Arduino Nano BLE deployment.</li>
+              <li>Reduced inference latency using TensorFlow Lite quantization + memory-efficient operations.</li>
+              <li>Deployed quantized CV models on edge hardware for offline real-time recognition.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">TinyML</span><span class="tag">TensorFlow Lite</span><span class="tag">Arduino</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tItem">
+          <div class="tDot"></div>
+          <div class="tCard">
+            <div class="tTop">
+              <h3>Industrial Robotics Trainee — ACE Robotics Pvt Ltd</h3>
+              <div class="tMeta">Jan 2024 – Apr 2024 · Chennai, India</div>
+            </div>
+            <ul class="bullets">
+              <li>Designed and simulated a robotic arm (payload-focused), end-effector concepts, CAD documentation.</li>
+              <li>Supported actuator testing, low-level interfacing, wiring, and control verification.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">SolidWorks</span><span class="tag">Actuators</span><span class="tag">Robotic Arm</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tItem">
+          <div class="tDot"></div>
+          <div class="tCard">
+            <div class="tTop">
+              <h3>Python Developer — Godrej Agrovet (AgriTech)</h3>
+              <div class="tMeta">May 2023 – Jul 2023 · India</div>
+            </div>
+            <ul class="bullets">
+              <li>Image processing pipeline for fruit ripeness using OpenCV + HSV segmentation; reduced manual inspection by ~40% and improved accuracy by ~25%.</li>
+              <li>Integrated QGIS + Python for spatial visualization of crop maturity data.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">OpenCV</span><span class="tag">Computer Vision</span><span class="tag">QGIS</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="sectionHead">
+        <h2>Skills</h2>
+        <p>Robotics software, learning, perception, and deployment.</p>
+      </div>
+
+      <div class="skillGrid">
+        <div class="skillCard">
+          <h3><i class="fa-solid fa-code"></i> Languages</h3>
+          <div class="chips">
+            <span class="chip">C++</span><span class="chip">Python</span><span class="chip">Embedded C</span>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <h3><i class="fa-solid fa-diagram-project"></i> Robotics Stack</h3>
+          <div class="chips">
+            <span class="chip">ROS2</span><span class="chip">Nav2</span><span class="chip">TF2</span>
+            <span class="chip">Actions</span><span class="chip">Lifecycle</span><span class="chip">Gazebo</span><span class="chip">RViz2</span>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <h3><i class="fa-solid fa-location-crosshairs"></i> Autonomy</h3>
+          <div class="chips">
+            <span class="chip">SLAM</span><span class="chip">Mapping</span><span class="chip">Localization</span>
+            <span class="chip">Path Planning</span><span class="chip">Sensor Fusion</span><span class="chip">CBFs</span><span class="chip">PID</span>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <h3><i class="fa-solid fa-eye"></i> Perception</h3>
+          <div class="chips">
+            <span class="chip">OpenCV</span><span class="chip">YOLOv5</span><span class="chip">AprilTags</span>
+            <span class="chip">LiDAR</span><span class="chip">RGB-D</span><span class="chip">Camera Calibration</span>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <h3><i class="fa-solid fa-brain"></i> Learning</h3>
+          <div class="chips">
+            <span class="chip">PPO</span><span class="chip">Q-Learning</span><span class="chip">PyTorch</span>
+            <span class="chip">Stable-Baselines3</span><span class="chip">Gymnasium</span><span class="chip">TensorFlow Lite</span>
+          </div>
+        </div>
+
+        <div class="skillCard">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+          <div class="chips">
+            <span class="chip">Linux</span><span class="chip">Git</span><span class="chip">Docker (basic)</span>
+            <span class="chip">TMUX</span><span class="chip">LaTeX</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h1>Contact</h1>
-      <p>Email: pavanyar@buffalo.edu</p>
-      <p>GitHub: github.com/Pavan-43</p>
+    <section class="section" id="contact">
+      <div class="sectionHead">
+        <h2>Contact</h2>
+        <p>Send a message (works on GitHub Pages using FormSubmit). No backend required.</p>
+      </div>
+
+      <div class="contactGrid">
+        <div class="contactCard">
+          <h3>Reach me</h3>
+          <div class="contactLine"><i class="fa-solid fa-envelope"></i> <a href="mailto:pavanyar@buffalo.edu">pavanyar@buffalo.edu</a></div>
+          <div class="contactLine"><i class="fa-solid fa-phone"></i> <a href="tel:+17165470648">+1 (716) 547-0648</a></div>
+          <div class="contactLine"><i class="fa-brands fa-github"></i> <a href="https://github.com/Pavan-43" target="_blank" rel="noopener">github.com/Pavan-43</a></div>
+          <div class="contactLine"><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/yarlagadda-pavan-015365259" target="_blank" rel="noopener">linkedin.com/in/yarlagadda-pavan-015365259</a></div>
+
+          <div class="miniNote">
+            Tip: later you can add organization logos in <code>assets/org/</code> and I’ll wire them into the About section.
+          </div>
+        </div>
+
+        <div class="contactCard">
+          <h3>Contact form</h3>
+
+          <!-- FormSubmit: replace YOUR_EMAIL with your email -->
+          <form class="form" action="https://formsubmit.co/pavanyar@buffalo.edu" method="POST">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Optional: redirect after submit -->
+            <input type="hidden" name="_next" value="https://pavan-43.github.io/#contact">
+
+            <label>
+              Name
+              <input required name="name" placeholder="Your name" />
+            </label>
+
+            <label>
+              Email
+              <input required type="email" name="email" placeholder="you@example.com" />
+            </label>
+
+            <label>
+              Message
+              <textarea required name="message" rows="5" placeholder="Tell me what you’re building..."></textarea>
+            </label>
+
+            <button class="btn primary" type="submit">
+              Send <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <p class="formHint">
+              Works on GitHub Pages. No server. (FormSubmit may require first-time confirmation email.)
+            </p>
+          </form>
+        </div>
+      </div>
     </section>
 
+    <footer class="footer">
+      <div>© <span id="year"></span> Pavan Yarlagadda · Robotics Portfolio</div>
+      <div class="footerLinks">
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="https://github.com/Pavan-43" target="_blank" rel="noopener">GitHub</a>
+        <a href="#about">Top</a>
+      </div>
+    </footer>
   </main>
-</div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
