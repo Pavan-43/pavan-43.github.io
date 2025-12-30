@@ -1,19 +1,17 @@
-// Robot animation
-lottie.loadAnimation({
-  container: document.getElementById("robot-bg"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "assets/robot-bg.json"
-});
+// simple fade-in on scroll
+const sections = document.querySelectorAll("section");
 
-// Scroll fade animation
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
     }
   });
 });
 
-document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+sections.forEach(sec => {
+  sec.style.opacity = 0;
+  sec.style.transform = "translateY(30px)";
+  observer.observe(sec);
+});
