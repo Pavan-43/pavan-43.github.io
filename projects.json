@@ -25,7 +25,7 @@
     "description": "Designed an automated irrigation system using sensors and microcontrollers to monitor soil moisture and intelligently control water flow for efficient agriculture.",
     "tags": ["IoT", "Arduino", "Embedded Systems"]
   },
-
+  
   {
     "title": "Liver Tumor Segmentation using Deep Learning",
     "category": ["ml", "cv"],
@@ -45,5 +45,5 @@
     "github": "https://github.com/Pavan-43/boom_arm_offsets",
     "description": "ROS 2 package for offline verification of excavator boom and arm joint angles using AprilTag-based vision. Processes recorded ROS 2 bag files to compute yaw offsets from visual fiducials and compares them against joint encoder values. Includes live visualization, CSV logging, and automatic plotting for calibration analysis.",
     "tags": ["ROS2", "AprilTags", "State Estimation", "Computer Vision", "TF", "Calibration", "Sensor Fusion"]
-  },
+  }
 ]
