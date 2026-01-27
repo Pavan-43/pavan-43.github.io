@@ -36,5 +36,20 @@
     "github": "",
     "description": "Developed a deep learning-based medical image segmentation model to detect liver tumors from CT scans. Evaluated predictions against ground truth masks using Dice coefficient.",
     "tags": ["Deep Learning", "Medical Imaging", "U-Net", "Python"]
+  },
+  {
+  "title": "Boom & Arm Offset Verification (ROS 2)",
+  "description": "ROS 2 package for offline verification of excavator boom and arm joint angles using AprilTag-based vision. Processes recorded ROS 2 bag files to compute yaw offsets from visual fiducials and compares them against joint encoder values. Includes live visualization, CSV logging, and automatic plotting for calibration analysis.",
+  "media": "assets/projects/robot.webm",
+  "github": "https://github.com/Pavan-43/boom_arm_offsets",
+  "category": ["robotics", "cv"],
+  "tags": [
+    "ROS2",
+    "AprilTags",
+    "State Estimation",
+    "Computer Vision",
+    "TF",
+    "Calibration",
+    "Sensor Fusion"]
   }
 ]
