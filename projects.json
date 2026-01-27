@@ -11,7 +11,7 @@
   {
     "title": "Autonomous Navigation using Reinforcement Learning",
     "category": ["robotics", "ml"],
-    "image": "assets/projects/excavator_rl.mp4",
+    "image": "",
     "github": "https://github.com/Pavan-43/Autonomous_Navigation_using_Reinforcement_Learning",
     "description": "Built an autonomous navigation system using reinforcement learning where the agent learns obstacle avoidance and goal-directed navigation through reward-based optimization.",
     "tags": ["Reinforcement Learning", "Navigation", "Robotics", "Python"]
